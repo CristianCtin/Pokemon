@@ -24,8 +24,9 @@ def options():
     """
 
     print("Choose one of the options:\n1 = Check your Pokemon\n2 = Add new Pokemon\n3 = Show all Pokemons\n4 = Visualise\n5 = Save your Pokedex\n6 = Exit")
+    opt = int(input())
     if opt in{1,2,3,4,5,6}:
-        return opt
+         return opt
 
 
 def check_poke():
@@ -38,6 +39,7 @@ def check_poke():
     :return: None if an invalid selection made otherwise an integer corresponding to a valid option
     """
     print("Choose one of the options:\n1 = By Name\n2 = By Type")
+    opt = int(input())
     if opt in {1, 2}:
         return opt
 
@@ -173,7 +175,7 @@ def save_pokes(pokedex = []):
     :return: None
     """
 
-    with open("pokedex.csv", "w") as pdex:
+    with open("pokedex.csv", "w", newline= "") as pdex:
         writer = csv.writer(pdex)
         for pokemon in pokedex:
             writer.writerow(pokemon)

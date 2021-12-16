@@ -1,5 +1,6 @@
 from utils import *
-
+from main import run
+from graphs import *
 
 #startup()
 #print(option())
@@ -13,3 +14,5 @@ from utils import *
 #print(load_pokes("pokemon_database.csv"))
 #print()
 #print(load_pokes("pokedex.csv"))
+#run()
+#pie_chart(load_pokes("pokedex.csv"))
